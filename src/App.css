@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.chart {
+  width: fit-content;
+  margin: 5rem auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

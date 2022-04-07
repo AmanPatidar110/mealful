@@ -1,0 +1,8 @@
+.dates {
+    display: flex;
+    justify-content: center;
+}
+
+.dates > div {
+    margin: 1rem;
+} 
