@@ -68,7 +68,7 @@ function BonusTask () {
         <Chart
           type='pie'
           width='60%'
-          height={400}
+          height={450}
           series={pieData}
           options={{
             labels: pieCategory
