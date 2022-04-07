@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import records from '../../API/data.json'
-import DatePicker from '../DatePicker';
+import DatePicker from '../DatePicker/DatePicker';
 import Chart from 'react-apexcharts'
 
 import TabPanel from '@mui/lab/TabPanel'
@@ -19,6 +19,7 @@ function Task () {
   const [scheduledDate, setScheduledDate] = useState()
   const [filteredDates, setFilteredDates] = useState()
 
+  const divRef = useRef();
   
   
   useEffect(() => {
@@ -41,8 +42,14 @@ function Task () {
       })
 
       setPieData(pData)
+     
     }
   }, [scheduledDate])
+
+  useEffect(() => {
+    if(divRef.current && pieData)
+    divRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [pieData])
 
   useEffect(() => {
     console.log(records)
@@ -125,7 +132,7 @@ function Task () {
             Hourly breakup for Item Date: {selectedDate.toLocaleDateString()} &
             Scheduled Date: {scheduledDate}{' '}
           </h4>
-          <div style={{ display: 'flex' }}>
+          <div style={{ display: 'flex' }} ref={divRef}  >
             <div className='chart'>
               <Chart
                 options={{

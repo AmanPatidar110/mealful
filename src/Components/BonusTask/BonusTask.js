@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import TabPanel from '@mui/lab/TabPanel'
-import DatePicker from '../DatePicker'
+import DatePicker from '../DatePicker/DatePicker'
 import records from '../../API/data.json'
 import classes from './BonusTask.module.css'
 import Chart from 'react-apexcharts'

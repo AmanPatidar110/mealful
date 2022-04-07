@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react'
 import './App.css'
 
-import DatePicker from './Components/DatePicker'
 
 import Box from '@mui/material/Box'
 import Tab from '@mui/material/Tab'
-import TabPanel from '@mui/lab/TabPanel'
 import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
 import Task from './Components/Task/Task'
