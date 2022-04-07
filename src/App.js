@@ -20,7 +20,8 @@ function App () {
     <div className='App'>
       <Box
         sx={{
-          bgcolor: 'background.paper'
+          bgcolor: 'background.paper',
+          width: '100%'
         }}
       >
         <TabContext value={value}>

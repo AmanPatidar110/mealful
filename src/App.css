@@ -1,11 +1,13 @@
 .App {
   text-align: center;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .chart {
-  width: fit-content;
-  margin: 5rem auto;
+  /* width: fit-content; */
+  /* padding: 0 13rem ; */
+  margin: 3rem auto;
+  width: 100%;
 }
 
 * {

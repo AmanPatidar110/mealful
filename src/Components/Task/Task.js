@@ -5,6 +5,8 @@ import Chart from 'react-apexcharts'
 
 import TabPanel from '@mui/lab/TabPanel'
 
+import classes from './Task.module.css'
+
 
 function Task () {
 
@@ -95,6 +97,8 @@ function Task () {
           Click on any bar to see the hour wise breakup of Scheduling Time of
           that particular date
         </p>
+        <div style={{margin: '0 auto', width: '75%'}}>
+
         <Chart
           options={{
             chart: {
@@ -122,17 +126,21 @@ function Task () {
             }
           ]}
           type='bar'
-          width={800}
-          height={500}
+          width='100%'
+          height={400}
+          
         />
+        </div>
+
       </div>
       {pieData && (
-        <>
+        <div style={{  width: '100%' }}>
           <h4>
             Hourly breakup for Item Date: {selectedDate.toLocaleDateString()} &
             Scheduled Date: {scheduledDate}{' '}
           </h4>
-          <div style={{ display: 'flex' }} ref={divRef}  >
+          <div className={classes.chartContainer}  ref={divRef}  >
+            
             <div className='chart'>
               <Chart
                 options={{
@@ -159,12 +167,12 @@ function Task () {
                   }
                 ]}
                 type='bar'
-                width={500}
+                width='100%'
                 height={250}
               />
             </div>
 
-            <div className='chart'>
+            <div className={`${classes.pieChart} chart`}>
               <Chart
                 type='pie'
                 height={400}
@@ -185,7 +193,7 @@ function Task () {
               />
             </div>
           </div>
-        </>
+        </div>
       )}
     </TabPanel>
   )

@@ -6,3 +6,8 @@
 .dates > div {
     margin: 1rem;
 } 
+
+.pieChart > div {
+    display: flex;
+    justify-content: center;
+}

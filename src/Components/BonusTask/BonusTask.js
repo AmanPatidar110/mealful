@@ -63,12 +63,12 @@ function BonusTask () {
         />
       </div>
 
-      <div className='chart'>
+      <div className={`chart ${classes.pieChart}`}>
         <p style={{marginBottom: '1rem'}}>Scheduled date prior to Item Date (Days)</p>
         <Chart
           type='pie'
-          height={600}
-          width={600}
+          width='60%'
+          height={400}
           series={pieData}
           options={{
             labels: pieCategory
